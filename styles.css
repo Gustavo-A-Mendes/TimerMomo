@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+.progress-container {
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 25px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 30px;
+    width: 0;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 25px 0 0 25px;
+    transition: width 0.5s;
+}
+
+.progress-time {
+    font-size: 1.2em;
+    color: #333;
+    position: relative;
+    top: -35px;
+    width: 100%;
+    text-align: center;
+}
+
+.total-hours {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.progress-image {
+    position: absolute;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+}
+
+.moving-image {
+    left: 0;
+    transition: left 0.5s;
+}
+
+.fixed-image {
+    right: -200px;
+}
