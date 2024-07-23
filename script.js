@@ -1,5 +1,5 @@
 // Total de horas para a barra de progresso
-const totalHours = 1;
+const totalHours = 120;
 // Total de milissegundos para 120 horas
 const totalMilliseconds = totalHours * 60 * 60 * 1000;
 
@@ -11,7 +11,7 @@ const leftImage = document.querySelector('.left-image');
 const rightImage = document.querySelector('.right-image');
 
 // Data de referência: 00h00 de Segunda-feira, 22 de Julho de 2024
-const referenceDate = new Date('2024-07-23T01:10:00');
+const referenceDate = new Date('2024-07-22T00:00:00');
 
 // Função para formatar o tempo em hh:mm:ss
 function formatTime(milliseconds) {
