@@ -1,5 +1,5 @@
 // Total de horas para a barra de progresso
-const totalHours = 36;
+const totalHours = 120;
 // Total de milissegundos para 120 horas
 const totalMilliseconds = totalHours * 60 * 60 * 1000;
 
@@ -38,8 +38,8 @@ function updateProgressBar() {
         progressTime.textContent = formatTime(remainingMilliseconds);
         
         // Mover as imagens em direção ao centro
-        leftImage.style.left = `calc(${percentage/2}% - 150px)`;
-        rightImage.style.right = `calc(${percentage/2}% - 150px)`;
+        leftImage.style.left = `calc(${percentage/2}% - 50px)`;
+        rightImage.style.right = `calc(${percentage/2}% - 50px)`;
         // leftImage.style.transform = `translateX(${movePercentage}%)`;
         // rightImage.style.transform = `translateX(-${movePercentage}%)`;
 
