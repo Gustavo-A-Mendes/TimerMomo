@@ -75,7 +75,7 @@ body {
 
 @media (max-width: 600px) {
     .progress-container {
-        height: 150px; /* Ajusta a altura da barra em telas menores */
+        height: 50px; /* Ajusta a altura da barra em telas menores */
     }
 
     .progress-bar {
