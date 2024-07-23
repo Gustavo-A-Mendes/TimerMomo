@@ -24,7 +24,7 @@ body {
     /* bottom: 38vh; */
     background-color: #ddd;
     border-radius: 25px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: center;
 }
@@ -50,10 +50,10 @@ body {
 
 .progress-image {
     position: absolute;
-    height: 100%; /* Ajuste a largura da imagem em relação à largura da tela */
+    height: 150%; /* Ajuste a largura da imagem em relação à largura da tela */
     width: auto; /* Mantém a proporção da imagem */
     top: 50%;
-    transform: translateY(-50%); /* Centraliza verticalmente a imagem */
+    transform: translateY(-60%); /* Centraliza verticalmente a imagem */
     transition: transform 0.5s;
 }
 
@@ -83,7 +83,7 @@ body {
     }
 
     .progress-image {
-        height: 100%; /* Ajusta a largura da imagem em telas menores */
+        height: 150%; /* Ajusta a largura da imagem em telas menores */
     }
 
     .progress-time {

@@ -38,8 +38,8 @@ function updateProgressBar() {
         progressTime.textContent = formatTime(remainingMilliseconds);
         
         // Mover as imagens em direção ao centro
-        leftImage.style.left = `calc(${percentage/2}% - 50px)`;
-        rightImage.style.right = `calc(${percentage/2}% - 50px)`;
+        leftImage.style.left = `calc(${percentage/2}% - 75px)`;
+        rightImage.style.right = `calc(${percentage/2}% - 75px)`;
         // leftImage.style.transform = `translateX(${movePercentage}%)`;
         // rightImage.style.transform = `translateX(-${movePercentage}%)`;
 
@@ -48,8 +48,8 @@ function updateProgressBar() {
         leftBar.style.width = '50%';
         rightBar.style.width = '50%';
         progressTime.textContent = '00:00:00';
-        leftImage.style.left = `calc(${50}% - 160px)`;
-        rightImage.style.right = `calc(${50}% - 160px)`;
+        leftImage.style.left = `calc(${50}% - 75px)`;
+        rightImage.style.right = `calc(${50}% - 75px)`;
         // leftImage.style.transform = 'translateX(50%)';
         // rightImage.style.transform = 'translateX(-50%)';
     }
