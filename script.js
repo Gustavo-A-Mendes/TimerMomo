@@ -1,15 +1,17 @@
 // Total de horas para a barra de progresso
-const totalHours = 120;
+const totalHours = 1;
 // Total de milissegundos para 120 horas
 const totalMilliseconds = totalHours * 60 * 60 * 1000;
 
 // Referência para a barra de progresso e o texto de progresso
-const progressBar = document.getElementById('progress-bar');
+const leftBar = document.getElementById('left-bar');
+const rightBar = document.getElementById('right-bar');
 const progressTime = document.getElementById('progress-time');
-const movingImage = document.getElementById('moving-image');
+const leftImage = document.querySelector('.left-image');
+const rightImage = document.querySelector('.right-image');
 
 // Data de referência: 00h00 de Segunda-feira, 22 de Julho de 2024
-const referenceDate = new Date('2024-07-22T00:00:00');
+const referenceDate = new Date('2024-07-23T01:10:00');
 
 // Função para formatar o tempo em hh:mm:ss
 function formatTime(milliseconds) {
@@ -29,14 +31,27 @@ function updateProgressBar() {
     const percentage = (elapsedMilliseconds / totalMilliseconds) * 100;
 
     if (remainingMilliseconds >= 0) {
-        progressBar.style.width = percentage + '%';
+        const movePercentage = Math.min(percentage, 100); // Limita o valor para não exceder 100%
+
+        leftBar.style.width = movePercentage / 2 + '%';
+        rightBar.style.width = movePercentage / 2 + '%';
         progressTime.textContent = formatTime(remainingMilliseconds);
-        movingImage.style.left = `calc(${percentage}% - 25px)`;
+        
+        // Mover as imagens em direção ao centro
+        leftImage.style.left = `calc(${percentage/2}% - 200px)`;
+        rightImage.style.right = `calc(${percentage/2}% - 200px)`;
+        // leftImage.style.transform = `translateX(${movePercentage}%)`;
+        // rightImage.style.transform = `translateX(-${movePercentage}%)`;
+
         requestAnimationFrame(updateProgressBar);
     } else {
-        progressBar.style.width = '100%';
+        leftBar.style.width = '50%';
+        rightBar.style.width = '50%';
         progressTime.textContent = '00:00:00';
-        movingImage.style.left = 'calc(100% - 200px)';
+        leftImage.style.left = `calc(${50}% - 200px)`;
+        rightImage.style.right = `calc(${50}% - 200px)`;
+        // leftImage.style.transform = 'translateX(50%)';
+        // rightImage.style.transform = 'translateX(-50%)';
     }
 }
 
