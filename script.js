@@ -1,5 +1,5 @@
 // Total de horas para a barra de progresso
-const totalHours = 12;
+const totalHours = 120;
 // Total de milissegundos para 120 horas
 const totalMilliseconds = totalHours * 60 * 60 * 1000;
 
